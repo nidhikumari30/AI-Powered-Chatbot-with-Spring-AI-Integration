@@ -1,80 +1,286 @@
-# 🍕 Food-Ordering-Delivery-Web-Application
+# 🤖 AI-Powered Chatbot with Spring AI Integration
 
-> **A Full-Stack Web App for Ordering Food Online** | Built with React & Spring Boot
+> **An Intelligent Conversational AI Application** | A Full-Stack College Project  
+> Built with React, Spring Boot, and Spring AI Framework
 
----
-
-## 📋 About This Project
-
-This is a **college project** that brings together **two powerful technologies**:
-
-- 🎨 **Frontend**: A sleek, user-friendly React app where you can browse restaurants, order food, and track deliveries
-- ⚙️ **Backend**: A robust Spring Boot server that handles all the business logic, user accounts, and order management
-
-Perfect for learning how **modern web applications** work end-to-end!
+![Project Status](https://img.shields.io/badge/Status-In%20Development-brightgreen)
+![Java Version](https://img.shields.io/badge/Java-11%2B-blue)
+![React Version](https://img.shields.io/badge/React-17.0.2-61DAFB?logo=react)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## 🚀 Quick Start (5 minutes)
+## 📋 Table of Contents
 
-### What You'll Need:
-- ✅ Java installed  
-- ✅ Node.js & npm installed  
-- ✅ Docker (optional, makes backend setup easier)
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [User Roles & Capabilities](#user-roles--capabilities)
+- [Installation & Setup](#installation--setup)
+- [Running the Application](#running-the-application)
+- [Database Configuration](#database-configuration)
+- [API Documentation](#api-documentation)
+- [Project Architecture](#project-architecture)
+- [Contributing](#contributing)
+- [License](#license)
+- [Developer Info](#developer-info)
 
-### Run the App:
+---
 
-**Frontend** (the pretty UI):
-```bash
-cd react-frontend
-npm install
-npm start
-```
-👉 Open http://localhost:3000 in your browser
+## Overview
 
-**Backend** (the brain):
-```bash
-cd spring-backend
-docker-compose up --build
-```
-👉 API runs at http://localhost:8080
+**AI-Powered Chatbot with Spring AI Integration** is a full-stack web application that demonstrates the integration of AI technologies into modern web applications. This college project showcases how to build an intelligent conversational interface where users can interact with an AI-powered chatbot using natural language.
+
+The application consists of:
+- **Frontend**: A responsive React-based chat interface for seamless user interactions
+- **Backend**: A Spring Boot REST API powered by Spring AI for intelligent response generation
+- **Database**: MySQL for storing user data and conversation history
+- **AI Engine**: Spring AI Framework for natural language processing and AI model integration
+
+### Purpose
+This project serves as a learning platform for understanding:
+- Full-stack web application development
+- AI and machine learning integration in web apps
+- RESTful API design with Spring Boot
+- Modern React frontend development
+- Authentication and authorization mechanisms
+- Real-time communication patterns
+
+---
+
+## ✨ Features
+
+### Core Features
+- 💬 **AI Conversational Interface** - Chat naturally with an intelligent chatbot powered by Spring AI
+- 🧠 **Spring AI Integration** - Advanced language models for intelligent responses
+- 🔐 **Secure Authentication** - JWT-based authentication for user security
+- 👤 **User Accounts** - Create and manage user profiles
+- 💾 **Conversation History** - Automatically save and retrieve chat conversations
+- ⚡ **Real-Time Responses** - Get instant AI-powered answers
+
+### Advanced Features
+- 📧 **Email Notifications** - Email confirmation for important actions
+- 🔄 **Session Management** - Automatic token refresh for seamless experience
+- 🎨 **Modern UI** - Beautiful, responsive interface built with React and Semantic UI
+- 📱 **Cross-Device Support** - Works on desktop and mobile devices
+- 🧪 **Comprehensive Testing** - Jest and Spring Boot Testing frameworks
+- 📊 **API Documentation** - Auto-generated Swagger/OpenAPI documentation
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| **React** | 17.0.2 | UI Framework |
+| **React Router** | 6.0+ | Client-side routing |
+| **Semantic UI React** | Latest | UI Component Library |
+| **Axios** | 0.24.0 | HTTP Client |
+| **Formik** | 2.2.9 | Form Management |
+| **Styled Components** | 5.3.3 | CSS-in-JS Styling |
+| **Jest** | Latest | Testing Framework |
+
+### Backend
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| **Spring Boot** | 2.4.2 | Framework |
+| **Spring Web** | Latest | REST API |
+| **Spring Security** | Latest | Authentication & Authorization |
+| **Spring Data JPA** | Latest | Database ORM |
+| **Spring AI** | Latest | AI/ML Integration |
+| **MySQL** | 8.0+ | Database |
+| **Maven** | Latest | Build Tool |
+| **JWT** | Latest | Token-based Auth |
+| **Swagger/OpenAPI** | 1.6.4 | API Documentation |
+
+### DevOps & Tools
+- **Docker** - Container orchestration
+- **Docker Compose** - Multi-container orchestration
+- **Git** - Version control
 
 ---
 
 ## 📂 Project Structure
 
 ```
-📦 Food-Ordering-Delivery-Web-Application
- ├── 📁 react-frontend      (What users see)
- │   └── src/
- │       ├── components/    (UI building blocks)
- │       ├── api/          (Talk to the server)
- │       ├── css/          (Pretty styles)
- │       └── ...
- │
- └── 📁 spring-backend      (The engine)
-     └── src/
-         ├── controller/    (Handle requests)
-         ├── service/       (Business logic)
-         ├── repository/    (Database stuff)
-         └── ...
+📦 AI-Powered-Chatbot-with-Spring-AI-Integration
+│
+├── 📁 react-frontend                 (React Single-Page Application)
+│   ├── public/                       (Static assets)
+│   │   ├── index.html               (Entry HTML)
+│   │   └── manifest.json            (PWA manifest)
+│   │
+│   ├── src/                         (Source code)
+│   │   ├── components/              (React components)
+│   │   │   ├── protectedRoutes/     (Private route components)
+│   │   │   ├── root/                (Root layout components)
+│   │   │   └── fragments/           (Reusable UI fragments)
+│   │   │
+│   │   ├── api/                     (API Service Layer)
+│   │   │   ├── authentication/      (Login, signup services)
+│   │   │   ├── hobby/               (Hobby/offer services)
+│   │   │   ├── users/               (User management services)
+│   │   │   └── test/                (Test services)
+│   │   │
+│   │   ├── css/                     (CSS Modules)
+│   │   │   ├── Account.module.css
+│   │   │   ├── Forms.module.css
+│   │   │   └── ...
+│   │   │
+│   │   ├── img/                     (Images & assets)
+│   │   ├── __test__/                (Test files)
+│   │   ├── App.js                   (Root component)
+│   │   ├── index.js                 (Entry point)
+│   │   └── babel.config.js          (Babel configuration)
+│   │
+│   ├── package.json                 (NPM dependencies)
+│   └── jest.config.js               (Jest testing config)
+│
+├── 📁 spring-backend                 (Spring Boot REST API)
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/                (Java source code)
+│   │   │   │   └── backend/
+│   │   │   │       ├── controller/  (REST Controllers)
+│   │   │   │       ├── service/     (Business Logic)
+│   │   │   │       ├── repository/  (Database Layer - JPA)
+│   │   │   │       ├── model/       (Entity classes)
+│   │   │   │       ├── security/    (JWT & Security config)
+│   │   │   │       └── exception/   (Exception handlers)
+│   │   │   │
+│   │   │   └── resources/
+│   │   │       ├── application.properties    (Config)
+│   │   │       └── application-dev.properties (Dev config)
+│   │   │
+│   │   └── test/                    (Test classes)
+│   │
+│   ├── pom.xml                      (Maven dependencies)
+│   ├── docker-compose.yml           (Docker services)
+│   ├── Dockerfile                   (Container image)
+│   ├── mvnw                         (Maven wrapper)
+│   └── mvnw.cmd                     (Maven wrapper Windows)
+│
+├── README.md                         (This file)
+└── LICENSE                           (MIT License)
 ```
 
 ---
 
-## 🎯 Key Features
+## 👥 User Roles & Capabilities
 
-✨ **User-Friendly Interface** - Browse, search, and order food easily  
-🔐 **Secure Login** - Your data is safe with JWT tokens  
-📦 **Order Management** - Track your orders in real-time  
-🏢 **Restaurant Dashboard** - Manage your menu and orders  
-💳 **Payment Ready** - Built to handle transactions  
+### 1. **Guest User**
+- Browse public information
+- View chatbot interface (read-only)
+- Access landing page
+
+### 2. **Registered User**
+- Create account with email verification
+- Access full chatbot functionality
+- Chat with AI assistant
+- View conversation history
+- Update profile information
+- Logout securely
+
+### 3. **Business User** (if applicable)
+- Register business account
+- Create/manage business profile
+- View analytics (optional feature)
+- Access admin dashboard
 
 ---
 
-## 🧪 Testing
+## 🚀 Installation & Setup
 
-Run tests to make sure everything works:
+### Prerequisites
+Ensure you have the following installed:
+
+```bash
+# Core Requirements
+- Java Development Kit (JDK) 11+
+- Node.js 16+ and npm 8+
+- MySQL Database Server 8.0+
+- Git
+
+# Optional (for Docker setup)
+- Docker Desktop 20.10+
+- Docker Compose 1.29+
+```
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/nidhikumari30/AI-Powered-Chatbot-with-Spring-AI-Integration.git
+cd AI-Powered-Chatbot-with-Spring-AI-Integration
+```
+
+### Step 2: Setup Frontend
+
+```bash
+# Navigate to frontend directory
+cd react-frontend
+
+# Install dependencies
+npm install
+
+# Create environment file (optional)
+echo "REACT_APP_API_BASE_URL=http://localhost:8080" > .env
+```
+
+### Step 3: Setup Backend
+
+```bash
+# Navigate to backend directory
+cd ../spring-backend
+
+# If using Docker (recommended):
+docker-compose up --build
+
+# OR manually:
+# Make sure MySQL is running
+# Update application.properties with your DB credentials
+./mvnw clean install
+```
+
+---
+
+## ▶️ Running the Application
+
+### Option 1: Using Docker Compose (Recommended)
+
+```bash
+# From project root
+cd spring-backend
+docker-compose up --build
+
+# In a new terminal, start frontend
+cd react-frontend
+npm start
+```
+
+**Access Points:**
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8080
+- API Docs: http://localhost:8080/swagger-ui/index.html
+
+### Option 2: Manual Setup
+
+#### Start Backend:
+```bash
+cd spring-backend
+./mvnw spring-boot:run
+```
+Backend runs at: http://localhost:8080
+
+#### Start Frontend (in new terminal):
+```bash
+cd react-frontend
+npm start
+```
+Frontend runs at: http://localhost:3000
+
+### Running Tests
 
 ```bash
 # Frontend tests
@@ -88,156 +294,242 @@ cd spring-backend
 
 ---
 
+## 🗄️ Database Configuration
+
+### Prerequisites
+- MySQL Server 8.0+ installed and running
+
+### Setup Steps
+
+1. **Create Database:**
+```sql
+CREATE DATABASE chatbot_db;
+USE chatbot_db;
+```
+
+2. **Configure Backend** (`spring-backend/src/main/resources/application.properties`):
+```properties
+# Database Configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/chatbot_db
+spring.datasource.username=root
+spring.datasource.password=your_password
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# JPA Configuration
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+# JWT Configuration
+app.jwt.secret=your_secret_key_min_256_bits_long
+app.jwt.expiration=86400000
+
+# Email Configuration (optional)
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=your_email@gmail.com
+spring.mail.password=your_app_password
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+```
+
+3. **Verify Connection:**
+```bash
+cd spring-backend
+./mvnw spring-boot:run
+# Check logs for "Started Application in X seconds"
+```
+
+### Schema Details
+Tables created automatically:
+- `users` - User account information
+- `conversation` - Chat messages and history
+- `roles` - User role definitions
+- `user_roles` - User-role mapping
+
+---
+
+## 📚 API Documentation
+
+### Accessing API Docs
+
+When the backend is running, visit:
+```
+http://localhost:8080/swagger-ui/index.html
+```
+
+### Key Endpoints
+
+#### Authentication
+```
+POST   /api/auth/signup        - Register new user
+POST   /api/auth/login         - User login
+POST   /api/auth/refresh       - Refresh JWT token
+POST   /api/auth/logout        - User logout
+```
+
+#### Chat/Chatbot
+```
+POST   /api/chat/message       - Send message to chatbot
+GET    /api/chat/history       - Get conversation history
+DELETE /api/chat/conversation  - Clear conversation
+```
+
+#### User Management
+```
+GET    /api/users/profile      - Get user profile
+PUT    /api/users/profile      - Update user profile
+GET    /api/users/{id}         - Get user by ID
+DELETE /api/users/{id}         - Delete user account
+```
+
+### Authentication
+All secured endpoints require JWT token in header:
+```
+Authorization: Bearer <your_jwt_token>
+```
+
+**To get a token:**
+1. Register: POST `/api/auth/signup`
+2. Login: POST `/api/auth/login`
+3. Use returned token in Authorization header
+
+---
+
+## 🏗️ Project Architecture
+
+### Architecture Pattern: **Layered Architecture**
+
+```
+┌─────────────────────────────────────┐
+│     Presentation Layer (React)      │
+│    - UI Components                  │
+│    - Routing & State Management     │
+└─────────────────────────────────────┘
+              ↓ (HTTP/REST)
+┌─────────────────────────────────────┐
+│       API Layer (Spring Web)        │
+│    - Controllers                    │
+│    - Request/Response Handling      │
+└─────────────────────────────────────┘
+              ↓
+┌─────────────────────────────────────┐
+│    Business Logic Layer             │
+│    - Services                       │
+│    - AI/Chatbot Logic               │
+│    - Spring AI Integration          │
+└─────────────────────────────────────┘
+              ↓
+┌─────────────────────────────────────┐
+│   Persistence Layer (Spring Data)   │
+│    - Repositories (JPA)             │
+│    - Database Operations            │
+└─────────────────────────────────────┘
+              ↓
+┌─────────────────────────────────────┐
+│      Database Layer (MySQL)         │
+│    - Tables & Relationships         │
+└─────────────────────────────────────┘
+```
+
+### Data Flow
+
+1. **User Request**: Frontend sends request to API
+2. **Controller**: Spring controller receives and validates request
+3. **Service**: Business logic processes the request
+4. **AI Processing**: Spring AI generates intelligent responses
+5. **Repository**: Data is persisted to MySQL
+6. **Response**: JSON response sent back to frontend
+7. **UI Update**: React component updates with new data
+
+---
+
 ## 🤝 Contributing
 
-Got ideas? Found a bug? Here's how to help:
+We welcome contributions! Here's how to get involved:
 
-1. **Fork** this project
-2. **Create** a new branch (`git checkout -b feature/amazing-feature`)
-3. **Make** your changes
-4. **Commit** (`git commit -m 'Add amazing feature'`)
-5. **Push** and open a **Pull Request**
+### Guidelines
+1. **Fork** the repository on GitHub
+2. **Clone** your fork locally
+3. **Create** a feature branch: `git checkout -b feature/amazing-feature`
+4. **Make** your changes with clear commit messages
+5. **Write** tests for new functionality
+6. **Commit**: `git commit -m 'Add amazing feature'`
+7. **Push**: `git push origin feature/amazing-feature`
+8. **Open** a Pull Request with detailed description
+
+### Code Standards
+- Follow Java naming conventions (camelCase for variables/methods, PascalCase for classes)
+- Follow React/JSX best practices
+- Write meaningful commit messages
+- Include comments for complex logic
+- Test your code before pushing
+
+### Reporting Issues
+Found a bug? Have a suggestion? Please open an issue with:
+- Clear description of the problem
+- Steps to reproduce
+- Expected vs actual behavior
+- Screenshots/logs if applicable
 
 ---
 
-## 📚 Learn More
+## 📄 License
 
-- 🌐 Check the **API docs** at: http://localhost:8080/swagger-ui/index.html (when backend is running)
-- 💡 Each component is documented in its folder
-- 🔧 Configuration files explain setup details
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+You are free to:
+- ✅ Use the code for personal or commercial projects
+- ✅ Modify and distribute the code
+- ✅ Use it in private applications
+
+With conditions:
+- Include the license and copyright notice
 
 ---
 
-## 👩‍💻 Developed by
+## 👩‍💻 Developer Info
+
+### Developed by
 
 **Nidhi Kumari**
 
-📧 **Email**: nidhikumari934181@gmail.com  
-🔗 **LinkedIn**: https://linkedin.com/in/nidhi-kumari-4648692b2  
-🐙 **GitHub**: https://github.com/nidhikumari30
+**Contact & Social:**
+- 📧 **Email**: [nidhikumari934181@gmail.com](mailto:nidhikumari934181@gmail.com)
+- 🔗 **LinkedIn**: [linkedin.com/in/nidhi-kumari-4648692b2](https://linkedin.com/in/nidhi-kumari-4648692b2)
+- 🐙 **GitHub**: [github.com/nidhikumari30](https://github.com/nidhikumari30)
+
+### Project Details
+- **Created**: January 2025
+- **Type**: Full-Stack College Project
+- **Status**: Active Development
+
+---
+
+## 📞 Support & Feedback
+
+For questions, issues, or feedback:
+1. Check existing [issues](https://github.com/nidhikumari30/AI-Powered-Chatbot-with-Spring-AI-Integration/issues)
+2. Open a new issue with detailed information
+3. Contact via email: nidhikumari934181@gmail.com
+
+---
+
+## 🙏 Acknowledgments
+
+- Spring AI Framework team for the AI integration capabilities
+- React community for excellent documentation
+- Spring Boot community for robust backend framework
+- All contributors and testers
 
 ---
 
 <div align="center">
 
-**Made with ❤️ for learning and sharing**
+### Made with ❤️ and ☕ for learning and innovation
+
+**Give this project a ⭐ if you found it helpful!**
 
 </div>
-
-<b>ReactJS-Spring-Boot-Full-Stack-App</b>
-<hr>
-
-This project consists of two applications: one is a Spring Boot Rest API
-called spring-backend and another is a ReactJS application called
-react-frontend.
-
-Service-oriented platform focusing on establishing and maintaining
-connections between consumers and small businesses in the The Arts,
-Entertainment, and Recreation sector.
-
-Click [here](https://www.hobbie.ch) to view the application.
-This application is subject to Copyright.
-
-<b>Applications</b>
-<hr>
-
- <b> - spring-backend</b>
-
-Spring Boot Web Java backend application that exposes a REST API to
-manage hobbies. Its secured endpoints can just be accessed if an access
-token (JWT) is provided.
-
-spring-backend stores its data in a MySql database.
-
-spring-backend has the following endpoints
-
-
-<b>-react-frontend</b>
-
-ReactJS frontend application where users can find and save hobbies and businesses can manage offers. In order to access the application, user / business must login using his/her username and password.  All the requests coming from react-frontend to secured endpoints in spring-backend have a access token (JWT) that is generated when user / business logs in.
-
-react-frontend uses Semantic UI React as CSS-styled framework.
-
-<b>Prerequisites</b>
-<hr>
-
--Java 11+
-
--npm
-
--JWT 
-
-<b>Set up</b>
-
-<hr></hr>
-
-Clone the repository:
-
-<pre>git clone https://github.com/purshink/ReactJS-Spring-Boot-Full-Stack-App.git</pre>
-
-Navigate to the newly created folder:
-
-<pre>cd  ReactJS-Spring-Boot-Full-Stack-App</pre>
- 
-
-<b>Frontend -</b>
-
-Install NodeJs.v.16.13.1 /npm v.8.3.0
-
-Navigate to react-frontend subfolder:
- 
-<pre>cd react-frontend</pre>
-
-Install the modules
-
-<pre>npm i</pre>
-
-Start the application on local host:
-
-<pre>npm start</pre>
-
-Navigate to:
-
-http://localhost:4200
-
- 
-<b>Backend -</b>
-Install JDK 11.0.11
-Install docker -v 20.10.7
-Install docker-compose -v 1.8.0
-
-Navigate to spring-backend subfolder:
-
-<pre>cd spring-backend</pre>
-
-Run the project with:
-
-<pre>docker-compose up --build</pre>
-
-
-The project has the following endpoints:
-
-IMPORTANT: to explore api enter url:  /v3/api-docs
-
-http://localhost:8080/swagger-ui/index.html
-
-
-NOTE: Testing API 
-
--/signup (create client-user) or /register (create business-user)
-
--/authenticate (returns JWT authentication token)
-
--use JWT token in order to authorize access to secured endpoints (click the lock icon or use the Authorize button on the upper right corner - then paste JWT Token )
-
-NOTE: /notification endpoint will return an internal server error if you don't specify spring.mail credentials first.
-
-<pre>The backend will run on http://localhost:8080 </pre>
-
-<b>Spring Mail</b>
-
-Make sure to specify a valid spring.mail.username and spring.mail.password in the application.properties file in order to be able to send an Email confirmation for updating user entries.
-
-IMPORTANT: if you decide not to specify mail credentials, you will get javax.mail.AuthenticationFailedException. The rest of the application should work normally despite this exception.
 
 
