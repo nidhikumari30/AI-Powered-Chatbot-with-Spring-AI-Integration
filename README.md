@@ -1,110 +1,128 @@
-# Food-Ordering-Delivery-Web-Application
+# 🍕 Food-Ordering-Delivery-Web-Application
 
-AI-powered Food Ordering & Delivery Web Application — React frontend + Spring Boot backend.
+> **A Full-Stack Web App for Ordering Food Online** | Built with React & Spring Boot
 
-## Project Overview
+---
 
-- **Purpose:** A full-stack food ordering and delivery platform connecting customers and restaurants/businesses. The app demonstrates authentication (JWT), REST APIs, and a React single-page frontend.
-- **Stack:** React, Semantic UI (frontend); Java Spring Boot, Spring Security, MySQL (backend); Docker / Docker Compose for local backend.
+## 📋 About This Project
 
-## Repository layout
+This is a **college project** that brings together **two powerful technologies**:
 
-- `react-frontend/` — React application (UI, components, services, tests)
-- `spring-backend/` — Spring Boot REST API (controllers, services, repositories, Docker)
+- 🎨 **Frontend**: A sleek, user-friendly React app where you can browse restaurants, order food, and track deliveries
+- ⚙️ **Backend**: A robust Spring Boot server that handles all the business logic, user accounts, and order management
 
-> The codebase originally included a feature-focused `api/` folder in the frontend; proposed improvements are described below.
+Perfect for learning how **modern web applications** work end-to-end!
 
-## Quickstart (development)
+---
 
-Prerequisites:
+## 🚀 Quick Start (5 minutes)
 
-- Java 11+
-- Node.js + npm (Node 16+ recommended)
-- Docker & Docker Compose (for the backend DB and app)
+### What You'll Need:
+- ✅ Java installed  
+- ✅ Node.js & npm installed  
+- ✅ Docker (optional, makes backend setup easier)
 
-Frontend (run locally):
+### Run the App:
 
-```powershell
+**Frontend** (the pretty UI):
+```bash
 cd react-frontend
 npm install
 npm start
 ```
+👉 Open http://localhost:3000 in your browser
 
-The frontend dev server runs at http://localhost:3000 by default (React).
-
-Backend (run with Docker Compose):
-
-```powershell
+**Backend** (the brain):
+```bash
 cd spring-backend
 docker-compose up --build
 ```
+👉 API runs at http://localhost:8080
 
-API docs (when backend runs):
+---
+
+## 📂 Project Structure
 
 ```
-http://localhost:8080/swagger-ui/index.html
+📦 Food-Ordering-Delivery-Web-Application
+ ├── 📁 react-frontend      (What users see)
+ │   └── src/
+ │       ├── components/    (UI building blocks)
+ │       ├── api/          (Talk to the server)
+ │       ├── css/          (Pretty styles)
+ │       └── ...
+ │
+ └── 📁 spring-backend      (The engine)
+     └── src/
+         ├── controller/    (Handle requests)
+         ├── service/       (Business logic)
+         ├── repository/    (Database stuff)
+         └── ...
 ```
 
-NOTE: Sign-up and authentication endpoints return a JWT token. Use that token to authorize requests to secured endpoints.
+---
 
-## Environment & Configuration
+## 🎯 Key Features
 
-- Frontend: add any runtime env in `.env` inside `react-frontend/` (e.g., `REACT_APP_API_BASE_URL=http://localhost:8080`)
-- Backend: configure `application.properties` (DB credentials, `spring.mail.*` if email features are used). If no mail account is provided some email endpoints may produce authentication exceptions but core features still work.
+✨ **User-Friendly Interface** - Browse, search, and order food easily  
+🔐 **Secure Login** - Your data is safe with JWT tokens  
+📦 **Order Management** - Track your orders in real-time  
+🏢 **Restaurant Dashboard** - Manage your menu and orders  
+💳 **Payment Ready** - Built to handle transactions  
 
-## Suggested safe restructuring (non-breaking, incremental)
+---
 
-I recommend these minimal, safe improvements you can apply before pushing to GitHub:
+## 🧪 Testing
 
-1. Frontend: move API helper files from `src/api/` into `src/services/` and add index exports (`src/services/index.js`) to create a simple barrel. This keeps imports tidy and is non-destructive.
-2. Frontend: group components by feature under `src/components/{home,auth,offer,users,...}` — many components are already feature-scoped, so this will be largely a reorganization.
-3. Backend: keep `spring-backend/` intact. If you rename, keep Maven coordinates unchanged or update `pom.xml` accordingly.
-4. Add a top-level `CONTRIBUTING.md` if you plan to accept PRs.
+Run tests to make sure everything works:
 
-I can perform the safe, incremental moves (creating barrels, updating relative imports) if you want — I'll do them in small commits to avoid breaking the app.
-
-## Tests
-
-- Frontend tests use Jest and React Testing Library. Run:
-
-```powershell
+```bash
+# Frontend tests
 cd react-frontend
 npm test
-```
 
-- Backend tests (if present) can be run with Maven inside `spring-backend/`:
-
-```powershell
+# Backend tests
 cd spring-backend
 ./mvnw test
 ```
 
-## How to prepare the repo for GitHub (recommended commit flow)
+---
 
-1. Run linters and tests locally.
-2. Make small, focused commits (e.g., "chore(frontend): move api services to services/ and add barrel exports").
-3. Push your branch and open a PR for review.
+## 🤝 Contributing
 
-If you want, I can prepare a commit that only reorganizes frontend services into `src/services/` and updates imports.
+Got ideas? Found a bug? Here's how to help:
 
-## Contributing
+1. **Fork** this project
+2. **Create** a new branch (`git checkout -b feature/amazing-feature`)
+3. **Make** your changes
+4. **Commit** (`git commit -m 'Add amazing feature'`)
+5. **Push** and open a **Pull Request**
 
-- Fork the repo, create a feature branch, open a PR. Keep changes focused and include tests for new behavior.
+---
 
-## Developed by
+## 📚 Learn More
 
-- You
-- Contact: nidhikumari934181@gmail.com
-- LinkedIn: https://linkedin.com/in/nidhi-kumari-4648692b2
-- GitHub: https://github.com/nidhikumari30
+- 🌐 Check the **API docs** at: http://localhost:8080/swagger-ui/index.html (when backend is running)
+- 💡 Each component is documented in its folder
+- 🔧 Configuration files explain setup details
 
-## Notes / Next steps I can do
+---
 
-- Create `src/services` barrels and update imports in the frontend (safe, can be done in small commits).
-- Run frontend tests and fix minor import path issues.
-- Add `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md` if needed.
+## 👩‍💻 Developed by
 
-If you'd like me to perform the safe frontend reorganizations now, say "Do the refactor" and I'll proceed with small commits and update the todo list.
+**Nidhi Kumari**
+
+📧 **Email**: nidhikumari934181@gmail.com  
+🔗 **LinkedIn**: https://linkedin.com/in/nidhi-kumari-4648692b2  
+🐙 **GitHub**: https://github.com/nidhikumari30
+
+---
+
+<div align="center">
+
+**Made with ❤️ for learning and sharing**
+
+</div>
 
 <b>ReactJS-Spring-Boot-Full-Stack-App</b>
 <hr>
